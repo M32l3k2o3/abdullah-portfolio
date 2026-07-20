@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abdullah Mohamed - Data Analyst portfolio showcasing Power BI dashboards, business intelligence, SQL, Python, and data storytelling projects.">
+  <title>Abdullah Mohamed | Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor cursor-outer" aria-hidden="true"></div>
+  <div class="cursor cursor-dot" aria-hidden="true"></div>
+
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader-card">
+      <div class="loader-logo">AM</div>
+      <p data-i18n="loader.text">جاري تحميل تجربة البيانات</p>
+      <div class="loader-track"><span id="loaderBar"></span></div>
+      <strong id="loaderPercent">0%</strong>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand magnetic" href="#home" aria-label="Abdullah Mohamed home">
+        <span>AM</span>
+        <strong>Abdullah Mohamed</strong>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" data-i18n="nav.home">الرئيسية</a>
+        <a href="#about" data-i18n="nav.about">نبذة</a>
+        <a href="#skills" data-i18n="nav.skills">المهارات</a>
+        <a href="#projects" data-i18n="nav.projects">المشاريع</a>
+        <a href="#timeline" data-i18n="nav.timeline">المسار</a>
+        <a href="#contact" data-i18n="nav.contact">تواصل</a>
+        <button class="language-toggle magnetic" id="languageToggle" type="button" aria-label="Switch language">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="code-rain" aria-hidden="true">
+        <span>SELECT revenue, margin FROM sales;</span>
+        <span>df.groupby("country").sum()</span>
+        <span>CALCULATE([Net Revenue], DATESYTD())</span>
+      </div>
+      <div class="hero-content reveal">
+        <p class="eyebrow" data-i18n="hero.eyebrow">معرض أعمال ذكاء الأعمال</p>
+        <h1>Abdullah Mohamed</h1>
+        <h2><span id="typedRole">Data Analyst</span><span class="typing-cursor">|</span></h2>
+        <p class="hero-copy" data-i18n="hero.copy">تحويل البيانات المعقدة إلى رؤى واضحة وقرارات أعمال أفضل.</p>
+        <div class="hero-actions">
+          <a class="btn primary magnetic" href="#projects" data-i18n="hero.ctaWork">استكشف أعمالي</a>
+          <a class="btn secondary magnetic" href="#featured" data-i18n="hero.ctaFeatured">شاهد لوحة البيانات المميزة</a>
+          <a class="btn ghost magnetic" href="#contact" data-i18n="hero.ctaContact">تواصل معي</a>
+        </div>
+      </div>
+      <div class="hero-widgets reveal delay-2" aria-label="Portfolio metrics preview">
+        <article class="mini-widget floating-card">
+          <span data-i18n="hero.widgetOneLabel">التخصص</span>
+          <strong>Power BI</strong>
+          <small data-i18n="hero.widgetOneText">لوحات رؤى تفاعلية</small>
+        </article>
+        <article class="mini-widget floating-card">
+          <span data-i18n="hero.widgetTwoLabel">منهج العمل</span>
+          <strong>SQL + DAX</strong>
+          <small data-i18n="hero.widgetTwoText">نمذجة ومقاييس تحليلية</small>
+        </article>
+        <article class="mini-chart floating-card">
+          <i style="height:42%"></i><i style="height:70%"></i><i style="height:55%"></i><i style="height:88%"></i><i style="height:62%"></i>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="about.eyebrow">نبذة</p>
+        <h2 data-i18n="about.heading">تفكير تحليلي وتنفيذ يركز على قيمة الأعمال.</h2>
+      </div>
+      <div class="about-card glass reveal">
+        <p data-i18n="about.bodyOne">اسمي عبدالله محمد، محلل بيانات شغوف بتحويل البيانات إلى رؤى أعمال واضحة وحلول تدعم اتخاذ القرار.</p>
+        <p data-i18n="about.bodyTwo">أكملت أكثر من 540+ ساعة من التعلم والتطبيق العملي في تحليل البيانات، وتطوير لوحات المعلومات، وتصوير البيانات، وذكاء الأعمال.</p>
+        <div class="about-counter">
+          <strong class="counter" data-target="540" data-suffix="+">0</strong>
+          <span data-i18n="about.counter">ساعة تعلم وتطبيق عملي</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="skills.eyebrow">المهارات</p>
+        <h2 data-i18n="skills.heading">أدوات لتنظيف البيانات وبناء النماذج وتقديم لوحات جاهزة لاتخاذ القرار.</h2>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+      <div class="orbit-wrap reveal" id="orbit">
+        <div class="orbit-center">DATA</div>
+        <div class="orbit-ring"></div>
+      </div>
+    </section>
+
+    <section class="stats section">
+      <div class="stats-grid glass reveal">
+        <article><strong class="counter" data-target="540" data-suffix="+">0</strong><span data-i18n="stats.learning">ساعة تعلم</span></article>
+        <article><strong class="counter" data-target="8" data-suffix="+">0</strong><span data-i18n="stats.tech">تقنيات أساسية</span></article>
+        <article><strong class="counter" data-target="9" data-suffix="+">0</strong><span data-i18n="stats.projects">مشاريع حقيقية</span></article>
+        <article><strong class="counter" data-target="100" data-suffix="%">0</strong><span data-i18n="stats.passion">شغف بالبيانات</span></article>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="projects.eyebrow">المشاريع</p>
+        <h2 data-i18n="projects.heading">أعمال Power BI حقيقية تجمع بين المقاييس والرؤى وسياق الأعمال.</h2>
+      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <section class="timeline section" id="timeline">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="timeline.eyebrow">المسار</p>
+        <h2 data-i18n="timeline.heading">بناء حلول تحليلية حديثة من البيانات الخام إلى ذكاء أعمال جاهز للإدارة.</h2>
+      </div>
+      <div class="timeline-list" id="timelineList"></div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-panel glass reveal">
+        <div class="contact-copy">
+          <p class="eyebrow" data-i18n="contact.eyebrow">تواصل</p>
+          <h2 data-i18n="contact.heading">دع البيانات تحكي القصة التالية.</h2>
+          <p data-i18n="contact.copy">تواصل مع عبدالله محمد لتنفيذ لوحات Power BI، وتقارير ذكاء الأعمال، ونمذجة البيانات، وأتمتة التقارير، وتحليلات دعم القرار.</p>
+          <div class="contact-meta">
+            <span>Abdullah Mohamed</span>
+            <span>abdallah.analyst@gmail.com</span>
+            <span>01023324649</span>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a class="social magnetic" href="https://www.linkedin.com/in/abdallah-mohamed-6950b0387" target="_blank" rel="noopener">in<span data-i18n="contact.linkedin">لينكدإن</span></a>
+          <a class="social magnetic" href="mailto:abdallah.analyst@gmail.com">@<span data-i18n="contact.email">البريد الإلكتروني</span></a>
+          <a class="social magnetic" href="https://wa.me/201023324649?text=Hello%20Abdullah%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20contact%20you." target="_blank" rel="noopener">WA<span data-i18n="contact.whatsapp">واتساب</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><span data-i18n="footer.text">تصميم وتطوير عبدالله محمد</span> <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
